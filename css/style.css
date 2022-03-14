@@ -90,6 +90,8 @@ img{
 
 
 .btn-def{
+	box-shadow: none;
+	border: 0;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -157,6 +159,76 @@ img{
 .sec-footer__logo{
 	width: 61px;
 	height: auto;
+}
+
+.modal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: none;	
+}
+.modal__wrap{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	padding: 50px 20px;	
+}
+
+.overlay{
+	background-color: #000;
+	opacity: 0.6;
+}
+
+.modal__overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.modal__content{
+	position: relative;
+	z-index: 10;
+	max-width: 600px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.modal-content{
+	padding: 20px 30px;
+}
+
+.modal-content__title{
+	margin-bottom: 30px;	
+}
+
+.block-form{}
+.block-form__el{
+	margin-bottom: 20px;
+	display: block;
+	width: 100%;
+}
+
+.form-el{
+	padding: 0 20px;
+	height: 40px;
+	font-size: 	18px;
+}
+
+.block-form__btn{
+	padding-left: 20px;	
+	padding-right: 20px;	
+	width: 100%;	
+	margin-top: 20px;	
 }
 
 @media screen and (max-width: 1000px){

@@ -27,8 +27,8 @@
 				</div>
 			</div>
 			<div class="sec-header__content">
-				<a href="#" class="btn-def sec-header__btn"><span>Авторизироваться</span></a>
-				<p class="text-info">Еще не <a href="#">зарегистрированы?</a><br> Самое время сделать это!</p>
+				<a href="#" class="btn-def sec-header__btn btn-modal" data-modal="#modal-auth"><span>Авторизироваться</span></a>
+				<p class="text-info">Еще не <a class="btn-modal" data-modal="#modal-reg" href="#">зарегистрированы?</a><br> Самое время сделать это!</p>
 			</div>
 		</div>
 	</div>
@@ -104,6 +104,40 @@
 		</div>
 	</div>
 </footer>
+
+<div class="modal" id="modal-reg">
+	<div class="modal__wrap">
+		<div class="modal__content modal-content">
+			<div class="modal-content__content">
+				<div class="title title_small modal-content__title">Регистрация</div>
+				<form class="modal-content__form block-form">
+					<input type="text" class="block-form__el form-el" placeholder="login">
+					<input type="password" class="block-form__el form-el" placeholder="pass">
+					<p class="text-info">Есть аккаут? <a class="btn-modal" data-modal="#modal-auth" href="#">авторизоваться</a></p>
+					<button class="btn-def block-form__btn">Зарегистрироватсья</button>
+				</form>
+			</div>
+		</div>
+		<div class="modal__overlay overlay"></div>
+	</div>
+</div>
+<div class="modal" id="modal-auth">
+	<div class="modal__wrap">
+		<div class="modal__content modal-content">
+			<div class="modal-content__content">
+				<div class="title title_small modal-content__title">Авторизоваться</div>
+				<form class="modal-content__form block-form">
+					<input type="text" class="block-form__el form-el" placeholder="login">
+					<input type="password" class="block-form__el form-el" placeholder="pass">
+					<p class="text-info">Нет аккаута? <a class="btn-modal" data-modal="#modal-reg" href="#">регистрация</a></p>
+					<button class="btn-def block-form__btn">Войти</button>
+				</form>
+			</div>
+		</div>
+		<div class="modal__overlay overlay"></div>
+	</div>
+</div>
+
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
